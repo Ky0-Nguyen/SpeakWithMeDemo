@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_body"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background_title"
+        android:weightSum="1">
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/back_icon"
+            android:layout_margin="@dimen/margin_title"
+            android:id="@+id/imageButtonBackDetail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_title"
+            android:id="@+id/textViewDetailTitle"
+            android:layout_marginTop="@dimen/margin_title"
+            android:layout_marginBottom="@dimen/margin_title"
+            android:layout_weight="0.9"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_text_titlebar"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/play_icon"
+            android:layout_margin="@dimen/margin_title"
+            android:id="@+id/imageButtonPlayDetail"/>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewDetail"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="1"
+        android:padding="@dimen/margin_title">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextInputDetail"
+            android:layout_weight="0.95"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:background="@android:color/transparent"
+            android:hint="@string/text_input"
+            android:textColor="@color/color_text_title"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageButtonSendDetail"
+            android:background="@drawable/send_icon"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_title"
+            />
+    </LinearLayout>
+</LinearLayout>
